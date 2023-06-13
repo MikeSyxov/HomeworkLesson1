@@ -16,21 +16,9 @@ int ReadInt(string message)
 int n1 = ReadInt("Введите первое число: ");
 int n2 = ReadInt("Введите второе число: ");
 int n3 = ReadInt("Введите третье число: ");
-int max_n = n1;
+int max = n1;
 
+if (max < n2) max = n2;
+if (max < n3) max = n3;
 
-{
-    if (n1 < n2)
-    {
-        Console.WriteLine($"Максимальное число: {n2}");
-    }
-    else
-        if (n2 < n3)
-    {
-        Console.WriteLine($"Максимальное число: {n3}");
-    }
-    return;
-
-}
-
-System.Console.WriteLine($"Максимальное число: {max_n}");
+Console.WriteLine($"Максимальное число: {max}");
